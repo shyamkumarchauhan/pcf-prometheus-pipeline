@@ -13,12 +13,12 @@ resources:
 - name: pcf-prometheus-pipeline
   type: git
   source:
-    uri: https://github.com/pivotal-cf/pcf-prometheus-pipeline.git
+    uri: https://github.com/shyamkumarchauhan/pcf-prometheus-pipeline.git
     branch: master
 - name: prometheus-release-git
   type: git
   source:
-    uri: https://github.com/bosh-prometheus/prometheus-boshrelease.git
+    uri: https://github.com/shyamkumarchauhan/prometheus-boshrelease.git
     branch: master
     tag_filter: v21.*
 - name: prometheus-release-blob
@@ -105,8 +105,6 @@ jobs:
         network: ((deploy_network))
         azs: ((deploy_azs))
         grafana_password: ((grafana_admin_password))
-        prometheus_password: ((prometheus_admin_password))
-        alertmanager_password: ((alertmanager_password))
         vm_type_micro: ((deploy_vm_type_micro))
         vm_type_small: ((deploy_vm_type_small))
         metrics_environment: ((metrics_environment))
